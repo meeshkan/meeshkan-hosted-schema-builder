@@ -1,4 +1,5 @@
 import main
+import yaml
 
 
 def test_index():
@@ -22,3 +23,22 @@ def test_post_non_json():
     )
     assert r.status_code == 400
     assert r.data.decode("utf-8") == "Content is not JSON\r\n"
+
+
+def test_post_recordings():
+    main.app.testing = True
+    client = main.app.test_client()
+
+    recordings = open("recordings.jsonl").read()
+
+    r = client.post(
+        "/schema-builder",
+        data=recordings,
+        base_url="https://localhost",
+        headers={"content-type": "application/x-www-form-urlencoded"},
+    )
+    result_yaml = yaml.safe_load(r.data.decode("utf-8"))
+
+    assert r.status_code == 200
+    assert result_yaml["servers"][0]["url"] == "http://api.github.com"
+    assert result_yaml["paths"]["/user/repos"]["description"] == "Path description"
