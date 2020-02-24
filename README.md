@@ -25,8 +25,8 @@ pip install -r requirements.txt -r requirements-dev.txt
 # Running locally
 Run the application with `python main.py`.
 
-- Access it in a browser at `http://localhost:8080`
-- and post data to it with `curl -X POST --data-binary @resources/recordings.jsonl http://localhost:8080`.
+- Access it in a browser: http://localhost:8080/schema-builder
+- Post data to it with curl: `curl -X POST --data-binary @recordings.jsonl http://localhost:8080/schema-builder`
 
 # Running tests
 Run `./check.sh`.
