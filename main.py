@@ -3,6 +3,7 @@ from flask import Flask, request
 from flask_talisman import Talisman
 from json.decoder import JSONDecodeError
 from http_types import HttpExchangeReader
+from openapi_typed_2.converters import convert_from_openapi
 import meeshkan
 import yaml
 
@@ -35,7 +36,7 @@ def generate_schema():
     try:
         http_exchanges = HttpExchangeReader.from_jsonl(file_content)
         openapi_schema = meeshkan.build_schema_batch(http_exchanges)
-        response_text = yaml.safe_dump(openapi_schema)
+        response_text = yaml.safe_dump(convert_from_openapi(openapi_schema))
         return (
             response_text,
             200,

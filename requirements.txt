@@ -1,4 +1,5 @@
 Flask==1.1.1
 meeshkan==0.2.8
+openapi-typed-2==0.0.1
 http-types==0.0.7
 flask-talisman
