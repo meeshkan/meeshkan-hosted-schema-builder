@@ -1,3 +1,6 @@
+[![Build Status](https://github.com/meeshkan/meeshkan-hosted-schema-builder/workflows/CI/badge.svg)](https://github.com/meeshkan/meeshkan-hosted-schema-builder/actions?query=workflow%3ACI)
+[![MIT licensed](http://img.shields.io/:license-MIT-blue.svg)](LICENSE)
+
 # meeshkan-hosted-schema-builder
 The [meeshkan schema builder](https://github.com/meeshkan/meeshkan) exposed as a HTTP API.
 
