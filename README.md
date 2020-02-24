@@ -4,7 +4,7 @@
 # meeshkan-hosted-schema-builder
 The [meeshkan schema builder](https://github.com/meeshkan/meeshkan) exposed as a HTTP API.
 
-To use the hosted service, visit [meeshkan.io/schema-builder](https://meeshkan.io/schema-builder).
+To use the hosted service, visit [meeshkan.io/schema-builder](https://meeshkan.io/schema-builder). Commits on the master branch are automatically deployed there.
 
 Read on for how to develop and run locally.
 
