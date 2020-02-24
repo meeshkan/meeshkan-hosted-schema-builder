@@ -1,7 +1,0 @@
-Meeshkan schema builder (https://meeshkan.github.io/http-types/) as a service
-
-POST traffic recordings in the HTTP Types format (https://meeshkan.github.io/http-types/) here:
-
-    curl -X POST --data-binary '@/path/to/recordings.jsonl' https://meeshkan.io/schema-builder
-
-A generated OpenAPI specification document will be returned.

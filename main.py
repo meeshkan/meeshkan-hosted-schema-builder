@@ -10,14 +10,14 @@ import yaml
 app = Flask(__name__)
 Talisman(app)
 
-api_description = open("api_description.txt").read()
+INDEX_HTML = open("index.html").read()
 
 
 @app.route("/")
 @app.route("/schema-builder", strict_slashes=False)
 def get():
     """Return a description of how to use the API."""
-    return api_description, 200, {"content-type": "text/plain"}
+    return INDEX_HTML
 
 
 @app.route("/", methods=["POST"])
