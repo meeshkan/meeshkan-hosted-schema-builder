@@ -6,9 +6,20 @@
 </head>
 <body>
 	<h1>Meeshkan schema builder</h1>
-	<p>POST traffic recordings in the <a href="https://meeshkan.github.io/http-types/">HTTP Types format</a> here:
-	<pre>curl -X POST --data-binary '@/path/to/recordings.jsonl' https://meeshkan.io/schema-builder</pre>
-	<p>A generated OpenAPI specification document will be returned.</p>
-	<p>See the <a href="https://github.com/meeshkan/meeshkan">meeshkan repository on GitHub</a> for more information.</p>
+	<p>POST traffic recordings in the <a href="https://meeshkan.github.io/http-types/">HTTP Types format</a> here and obtain a generated OpenAPI specification.</p>
+
+	<h2>Post using curl</h2>
+	<p><code>curl -X POST --data-binary '@/path/to/recordings.jsonl' https://meeshkan.io/schema-builder</code></p>
+
+	<h2>Post files in browser</h2>
+	<div>
+		<form method="post" action="/schema-builder" enctype="multipart/form-data">
+			<input name="file" type="file"/>
+			<input type="submit" value="Upload"/>
+		</form>
+	</div>
+
+	<h2>About</h2>
+	<p>See the <a href="https://github.com/meeshkan/meeshkan">meeshkan repository on GitHub</a> for more information, and the <a href="https://github.com/meeshkan/meeshkan-hosted-schema-builder">meeshkan-hosted-schema-builder repository</a> for how this service is built.</p>
 </body>
 </html>

@@ -1,2 +1,6 @@
 runtime: python37
 service: schema-builder
+automatic_scaling:
+  min_instances: 1
+inbound_services:
+  - warmup
