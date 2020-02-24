@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask_talisman import Talisman
 from json.decoder import JSONDecodeError
 from http_types import HttpExchangeReader
 import meeshkan
@@ -7,6 +8,7 @@ import yaml
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
 app = Flask(__name__)
+Talisman(app)
 
 api_description = open("api_description.txt").read()
 
