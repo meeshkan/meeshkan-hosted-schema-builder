@@ -1,5 +1,6 @@
-import main
 import yaml
+
+import main
 
 
 def test_index():
